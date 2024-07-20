@@ -1,0 +1,12 @@
+FROM node:20.15-alpine
+
+# cd app
+WORKDIR /app
+#Dest/app
+COPY app.js package.json ./
+
+#Install dep
+RUN npm install
+
+#Comand run app
+CMD [ "node", "app.js" ]
